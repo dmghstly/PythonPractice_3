@@ -4,20 +4,20 @@
 
 from django.contrib import admin
 
-from jobs.models import Job
+from author.models import Author
 
 
-@admin.register(Job)
-class JobAdmin(admin.ModelAdmin):
+@admin.register(Author)
+class AuthorAdmin(admin.ModelAdmin):
     list_display = (
-        "description",
-        "image",
-        "detail_description",
+        "resume_ref",
+        "github_ref",
+        "email",
         "created_at",
         "updated_at",
     )
 
-    search_fields = ("description",)
+    search_fields = ("email",)
 
     list_filter = (
         "created_at",

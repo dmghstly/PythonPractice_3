@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # созданные приложения
     "jobs.apps.JobsConfig",
     "blog.apps.BlogConfig",
+    "author.apps.AuthorConfig",
     # установленные приложения
     "ckeditor",
     "ckeditor_uploader",
@@ -65,7 +66,7 @@ ROOT_URLCONF = "portfolio.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ["portfolio/templates"],
+        "DIRS": ["portfolio/templates", "author/templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
